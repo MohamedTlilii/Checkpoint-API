@@ -20,10 +20,15 @@
 .post {
   margin: 0 !important;
   height: 350px !important;
+  margin-bottom: 15px!important;
   overflow-y: scroll;
   overflow-x: hidden;
 }
 .comments {
   padding: 20px;
-  margin: 10px;
+ 
+}
+.post-meta {
+  display: flex;
+  justify-content: center;
 }

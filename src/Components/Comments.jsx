@@ -16,9 +16,12 @@ function Comments({ postId }) {
     <Comment.Group className="comments">
       {comments.map((comment) => (
         <Comment>
-          <Comment.Avatar as="a" src="/images/avatar/small/stevie.jpg" />
+          <Comment.Avatar
+            as="a"
+            src="https://icones.pro/wp-content/uploads/2021/02/symbole-masculin-icone-l-utilisateur-noir.png"
+          />
           <Comment.Content>
-            <Comment.Author>Stevie Feliciano</Comment.Author>
+            <Comment.Author>{comment.name}</Comment.Author>
             <Comment.Metadata>
               <div>2 days ago</div>
               <div>

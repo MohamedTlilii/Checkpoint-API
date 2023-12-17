@@ -27,6 +27,7 @@ function Posts() {
           {showComments && post.id === postId && (
            <Comments postId={post.id}/>
           )}
+          <Card.Meta className="post-meta">
           <Button
             onClick={() => {
               setShowComments(!showComments);
@@ -35,6 +36,7 @@ function Posts() {
           >
             Comments
           </Button>
+          </Card.Meta>
         </Card>
       ))}
     </div>
