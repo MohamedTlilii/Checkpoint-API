@@ -2,3 +2,18 @@
   text-align: center;
 }
 
+.home {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.users {
+  display: flex;
+  flex-wrap: wrap;
+gap: 50px;
+  margin: 50px;
+}
+.user {
+  margin: 0 !important;
+}
