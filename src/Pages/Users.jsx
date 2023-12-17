@@ -7,7 +7,7 @@ function Users() {
 
   useEffect(() => {
     axios
-      .get("https://jsonplaceholder.typicode.com/users") // Assuming you want users data, not posts
+      .get("https://jsonplaceholder.typicode.com/users") 
       .then((response) => setUsers(response.data))
       .catch((error) => console.error(error));
   }, []);

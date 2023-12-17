@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Card } from "semantic-ui-react";
+import { Button, Card, Comment, Icon } from "semantic-ui-react";
 import axios from "axios";
+import Comments from "../Components/Comments";
 
 function Posts() {
   const [posts, setPosts] = useState([]);
+  const [showComments, setShowComments] = useState(false);
+  const [postId, setPostId] = useState();
 
   useEffect(() => {
     axios
@@ -14,14 +17,24 @@ function Posts() {
 
   return (
     <div className="posts">
-      {posts.map((posts) => (
-        <Card className="post" key={posts.id}>
-         
+      {posts.map((post) => (
+        <Card className="post" key={post.id}>
           <Card.Content>
-            <Card.Header>{posts.title}</Card.Header>
+            <Card.Header>{post.title}</Card.Header>
             <Card.Description>{posts.body}</Card.Description>
           </Card.Content>
-          
+
+          {showComments && post.id === postId && (
+           <Comments postId={post.id}/>
+          )}
+          <Button
+            onClick={() => {
+              setShowComments(!showComments);
+              setPostId(post.id);
+            }}
+          >
+            Comments
+          </Button>
         </Card>
       ))}
     </div>

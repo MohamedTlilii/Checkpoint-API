@@ -8,12 +8,19 @@
   justify-content: center;
   align-items: center;
 }
-.users, .posts {
+.users,
+.posts {
   display: flex;
   flex-wrap: wrap;
-gap: 50px;
+  align-items: flex-start;
+  gap: 50px;
   margin: 50px;
 }
-.user, .post {
+.user,
+.post {
   margin: 0 !important;
+  min-height: 250px !important;
+}
+.comments {
+  padding: 20px;
 }
